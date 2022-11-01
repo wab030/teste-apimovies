@@ -1,0 +1,26 @@
+{
+  "name": "aula11-restfulapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "test1": "jest --detectOpenHandles",
+    "_comment1": "jest --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "joi": "^17.6.2",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.4",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "jest": "^29.2.2",
+    "supertest": "^6.3.1"
+  }
+}

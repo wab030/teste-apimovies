@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Museu Virtual</title>
+    <link rel="stylesheet" type="text/css" href="styles/home.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="text-right"><%= user ? user.email : null %></p>
+            <nav class="menu">
+                <ul>
+                    <li><a href='/'>Home</a></li>
+                    <% if(user) { %>
+                        <li><a href='/logout'>Logout</a> </li>
+                    <%} else { %>
+                        <li><a href='/formautenticar'>Login</a></li> 
+                        <li><a href='/insereusuario'>Signup</a></li>
+                    <% } %>
+                    <li><a href='/inserirobra'>Insere Obra</a></li>
+                    <li><a href='#'></a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="title">Museu Virtual</h1>
+        <div>
+            <% for (let i=0; i<paintings.length; i++) { %>
+                <div class="card">
+                    <img src="<%= paintings[i].urlimagem %>" class="card-image" alt="<%= paintings[i].nome %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="/obradearte?idobra=<%= paintings[i].idobra %>">
+                                <%= paintings[i].nome %>
+                            </a>
+                            <a href="/alterarobradearte?idobra=<%= paintings[i].idobra %>">
+                                <img src="images/editicon.svg" alt="Icone de alteração" class="card-change-icon" />
+                            </a>
+                        </h5>
+                        <p class="card-text">
+                            <%= paintings[i].artista %>
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

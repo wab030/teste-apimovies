@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Museu Virtual</title>
+    <link rel="stylesheet" type="text/css" href="styles/home.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Obra <%= painting[0].nome %>
+        </h2>
+        <div>
+            <div class="card">
+                <img src="<%= painting[0].urlimagem %>" class="card-image" alt="<%= painting[0].nome %>">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= painting[0].nome %>
+                    </h5>
+                    <p class="card-text">
+                        <%= painting[0].artista %>
+                    </p>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</body>
+
+</html>

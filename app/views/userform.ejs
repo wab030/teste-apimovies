@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Museu Virtual</title>
+</head>
+
+<body>
+    <section class="errors">
+        <% if(errors) { %>
+            <ul>
+                <% for(let i=0; i < errors.length; i++){ %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } %>
+    </section>
+    <form action="http://localhost:3000/usuario/salvar" method="post">
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="confirmpassword" placeholder="Confirme sua senha" />
+        <input type="submit" class="button" value="Cadastrar">
+    </form>
+
+
+</body>
+
+</html>
